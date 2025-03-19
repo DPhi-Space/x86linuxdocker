@@ -8,3 +8,9 @@
 # Start
 
 To start the container just execute `./scripts/start_container.sh` and it will also start the VNC server automatically and open the Screen Sharing APP of the Mac.
+
+# Notes
+
+1. If you need to install other utilities, change the DockerFile then execute `./scripts/gen_image.sh` to rebuild and then launch normally
+2. Everything that you need persistent, you MUST keep in the home folder /home/user and is bind mounted to ./
+    1. Everything that is outside /home/user will be lost upon stopping the container
